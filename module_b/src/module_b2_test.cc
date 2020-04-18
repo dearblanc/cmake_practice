@@ -1,5 +1,5 @@
-#include <gtest/gtest.h>
-#include <module_b2.h>
+#include "gtest/gtest.h"
+#include "module_b2.h"
 
 TEST(MODULE_B2, GET) {
     ModuleB2 b2;

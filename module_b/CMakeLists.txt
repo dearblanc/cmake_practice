@@ -11,10 +11,7 @@ add_library(sub::a ALIAS ${TARGET})
 
 set(TEST_TARGET ${PROJECT_NAME}_test)
 set(TEST_SRC src/module_b_test.cc src/module_b1_test.cc src/module_b2_test.cc)
-add_executable(${TEST_TARGET} ${TEST_SRC} ${SRC})
-target_include_directories(${TEST_TARGET}
-                           PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(${TEST_TARGET} PRIVATE sub::test)
+autorun_test(${TEST_TARGET} ${SRC} ${TEST_SRC})
 
 set_target_properties(
   ${TARGET} ${TEST_TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY

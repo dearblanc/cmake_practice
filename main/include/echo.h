@@ -1,5 +1,5 @@
 #include <string>
-#include <module_a.hpp>
+#include <module_a.h>
 #include <module_b1.h>
 #include <module_b2.h>
 

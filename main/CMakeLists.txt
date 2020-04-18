@@ -12,6 +12,5 @@ set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY
 target_link_libraries(
   ${TARGET}
   PRIVATE sub::a
-  PRIVATE sub::b
-  PRIVATE sub::test)
+  PRIVATE sub::b)
 

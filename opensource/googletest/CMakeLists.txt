@@ -5,7 +5,6 @@ set_target_properties(
   gtest PROPERTIES IMPORTED_LOCATION
                    ${CMAKE_CURRENT_SOURCE_DIR}/libs/libgtest.a)
 target_include_directories(gtest INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
-add_library(sub::test ALIAS gtest)
 
 add_library(gtest_main IMPORTED STATIC GLOBAL)
 set_target_properties(
@@ -13,4 +12,3 @@ set_target_properties(
                         ${CMAKE_CURRENT_SOURCE_DIR}/libs/libgtest_main.a)
 target_include_directories(gtest_main
                            INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
-add_library(sub::test_main ALIAS gtest_main)
