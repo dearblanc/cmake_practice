@@ -12,6 +12,7 @@ add_library(sub::a ALIAS ${TARGET})
 set(TEST_TARGET ${PROJECT_NAME}_test)
 set(TEST_SRC src/module_b_test.cc src/module_b1_test.cc src/module_b2_test.cc)
 autorun_test(${TEST_TARGET} ${SRC} ${TEST_SRC})
+generate_coverage(${TEST_TARGET})
 
 set_target_properties(
   ${TARGET} ${TEST_TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY
